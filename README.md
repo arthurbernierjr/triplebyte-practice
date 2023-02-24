@@ -63,6 +63,188 @@ This type of architecture allows for a non-blocking and asynchronous flow of the
 
 This is also why Brendan Eichs is a genius... literally.
 
+## Properly naming a function
+
+The variable you use for a function should contain a **verb**. Functions **do** something, most often:
+
+* getting data
+* setting data
+* checking data
+* printing data
+
+If the purpose of your function is to check data, for example, use the verb `check` in the variable name.
+
+Example function that contains a conditional:
+
+```javascript
+const checkInputLength = (input) => {
+	if (input.length > 10) {
+		console.log('input length is greater than 10');
+	} else {
+		console.log('input length is not greater than 10');
+	}
+};
+```
+
+1. A Function name should always start with a verb
+1. A function if possible should be pure meaning it shouldn't effect anything outside of itself
+1. If it does effect something outside of itself you should let the resder of the function know that by the name for example we could have a function that checks if something is or isn't something
+1. we could also have a function that changes something or **Mutates** something like when you are playing a video game and you score a point, the function that updates the score could be called updateScore or setScore or changeScore
+1. Functions should try to do **only one thing** If a function, called `checkInputLength`, does more than just check input, then it is a poor function.
+
+```javascript
+	// function that mutates
+	const ricMershon = {
+	age: 21
+	}
+	const scottDraper = {
+	age: 25
+	}
+	
+	const increaseAge = (person) => {
+	  person.age += 1
+	  console.log (`Horray it's your ${person.age} birthday`)
+	}
+	
+```
+
+Takeaway: Think about appropriate **verbs** to use in your function variable names. The verbs should indicate the **one thing** that the function does.
+
+## Write an arrow function with a parameter
+
+The preceding function, `checkInputLength` had a **parameter** called `input`.
+
+Functions can receive input that modify their behavior a bit.  This input is called a **parameter**.
+
+In the below example, the parameter is arbitrarily called `name`. We can call our parameters whatever we want - whatever makes semantic sense.
+
+Using **concatenation** I can put the input into a string:
+
+```javascript
+const sayName = (name) => {
+	console.log('Hello! My name is ' + name);
+}
+```
+
+When we _invoke_ the function, we can specify the value of the parameter, this is called an **argument**:
+
+```javascript
+sayName("Frodo");
+```
+
+We can continue to invoke the function with whatever **arguments** we want:
+
+```javascript
+sayName("Merry");
+sayName("Pippin");
+sayName("Sam");
+```
+
+Each time, the output of the function will change to reflect the argument.
+
+### Argument vs Parameter
+
+The **argument** is the input, the **parameter** is how the input is represented in the function.
+
+```javascript
+const func = (PARAMETER) => {
+	// some code
+}
+
+func(ARGUMENT);
+```
+
+
+## Write an arrow function with multiple parameters
+
+A function can take any number of parameters.
+
+```javascript
+const calculateArea = (num1, num2) => {
+	console.log(num1 * num2);
+}
+```
+
+When you invoke the function, you generally want to supply the right number of arguments.
+
+```javascript
+calculateArea(4, 4)
+
+```
+> => 16
+
+
+## How does this work? Aka (The Execution Context Interview Question Answer)
+
+```javascript
+let myNum = 2;
+
+const square = (num) => {
+	return num * num
+}
+
+```
+so in our code we have now created a variable myNum on line 1  that is equal to 2 and then created
+a variable called sqaure that is equal to the function we created.
+
+JavaScript does 3 super awesome things that makes it a great very first programming language, and that makes
+it elegant enough to be used by developers with decades of experience.
+
+We will go over those things as we go through this course but what pertains to us is the awesome feature of the
+JavaScript being single threaded and reading code line by line and executing code only when you ask it to.
+
+So in JS when it comes to what's running in our code we are never too confused if we remember JS goes line by
+line and 1 at a time.
+
+And we keep track of this in what's called our Execution Context
+![js engine 1](https://media.git.generalassemb.ly/user/15881/files/d4842a00-3df3-11ea-909c-33a0a198c451)
+
+So when the JS Engine looks at our code it will start at the top and perform each operation line by line
+
+![js engine 2](https://media.git.generalassemb.ly/user/15881/files/d77f1a80-3df3-11ea-90dd-edd3b3f119ef)
+
+```javascript
+let myNum = 2;
+
+const square = (num) => {
+	return num * num
+}
+const ans = square(myNum)
+
+```
+
+![js engine 3 updated](https://media.git.generalassemb.ly/user/15881/files/db12a180-3df3-11ea-8acb-33e15c196cf3)
+
+So as you can see when we call a function we go ahead and add it to the stack of things that we want JS to
+do. Once JS has finished that task it goes back to the main code on the next line and runs again.
+
+So once square has completed running it will give us a value and assign it to ans
+
+
+```javascript
+let myNum = 2;
+
+const square = (num) => {
+	return num * num
+}
+const ans = square(myNum)
+console.log("Hello World")
+
+```
+ what order will this happen
+
+
+```javascript
+let myNum = 2;
+
+const square = (num) => {
+	return num * num
+}
+console.log("Hello World")
+const ans = square(myNum)
+
+``` 
+
 ## Node JS
 
 ![](/images/nodejs.png)
