@@ -22,8 +22,44 @@ type: "lecture"
 ![components](https://i.imgur.com/TGZKfoI.png)
 
 ![mern architecture](/arthurGraphic-01.jpg)
+	
 
 </center>
+
+# What is TripleByte
+
+![](https://theme.zdassets.com/theme_assets/9523437/ae0ce0d40e5c8fed95d77cae4b2b97d1061efb65.png)
+
+Triplebyte is the engineering industry's largest directory of skilled, technically-assessed software engineers. They connect companies with tens of thousands of engineers who are actively seeking or open to learning about new opportunities. Engineers come to them because they help streamline their job search and certify their abilities. Employers come to them because they make their sourcing easier and more effective by pre-screening candidates and providing quick ways to connect with talented engineers, including those from underrepresented groups.
+
+
+# How does TripleByte Assess Engineers
+
+Engineers complete various adaptive online quizzes (most quizzes are multiple-choice and some require actually writing code). Trained on over 300,000 engineers, the Triplebyte evaluation uses machine learning to identify talented candidates.
+
+We've developed a set of questions and a well-defined rubric to ensure standardization across candidate scoring. The quizzes ask each candidate different questions from our large pool of potential questions, based on where they have shown strength and weakness. By doing this we are able to get more accurate results in a shorter amount of time. The statistical model we use for our quiz (item response theory) is similar to what is behind the GRE and GMAT tests.
+
+Most of the quiz questions involve looking at blocks of code and answering questions about them (finding bugs and predicting behavior). Some questions test specific knowledge.
+
+# Sample TripleByte Candidate Profile
+
+![Imgur](https://i.imgur.com/gn93keJ.png)
+
+![Imgur](https://i.imgur.com/9ae4Kd5.png)
+
+
+# How will we use TripleByte
+
+1. You will take 3 TripleByte tests
+1. TripleByte will evaluate your performance and let us know what percentile your performance sits
+1. Based on your performance we will provide you with additional resources to hone in on your skills
+1. Each test takes 1 hour, you will work on the test, take a 30 minute break then take the next until done.
+
+
+# Which tests will we take
+1. Javascript Knowledge which asseses your knowledge of JS the language as well as the Node JS ecosystem
+1. Front End Development which asseses your knowledge of Front End Technologies and handling APIs
+1. React which asseses your knowledge of React and the ecosystem around react
 
 ##  HTML
 ##  CSS
