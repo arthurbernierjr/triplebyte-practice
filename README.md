@@ -21,7 +21,7 @@ type: "lecture"
 
 ![components](https://i.imgur.com/TGZKfoI.png)
 
-![mern architecture](https://www.dropbox.com/s/4ty5gmm1kefk7yw/arthurGraphic-01.jpg?dl=1)
+![mern architecture](/arthurGraphic-01.jpg)
 
 </center>
 
