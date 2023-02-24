@@ -1,8 +1,8 @@
 ---
-track: "Teams"
+track: "Triple Byte"
 title: "MERN & Systems"
-week: 26
-day: 3
+week: Post Coures
+day: Bonus
 type: "lecture"
 ---
 
